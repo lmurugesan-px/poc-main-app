@@ -1,0 +1,11 @@
+<p>dashboard works!</p>
+<div class="card">
+  <a (click)="pxBackupNavigate(applications.PX_BACKUP_APP)">PX-Backup</a>
+</div>
+<div class="card">
+  <a (click)="pxBackupNavigate(applications.PDS_APP)">PDS</a>
+</div>
+<div>
+  <iframe #pdsFrame  [hidden]="this.destinationUrl!='http://localhost:7000'" id="pds-frame" src="http://localhost:7000/dashboard" frameborder="0"></iframe>
+  <iframe #pxFrame  [hidden]="this.destinationUrl!='http://localhost:7500'" id="px-frame" src="http://localhost:7500/dashboard" frameborder="0"></iframe>
+</div>
